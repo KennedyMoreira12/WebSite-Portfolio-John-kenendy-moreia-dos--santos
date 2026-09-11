@@ -18,10 +18,11 @@ export const Content = styled.div`
   @media (max-width: 600px) {
     padding: 5px;
   }
-  
+
   @media (max-width: 760px) {
     flex-direction: column-reverse;
     justify-content: space-around;
+    gap: 20px;
   }
 `;
 
@@ -37,37 +38,60 @@ export const Infos = styled.div`
 
 export const Name = styled.span`
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 700;
+  line-height: 1.2;
 
   @media (max-width: 760px) {
     font-size: 25px;
   }
 `;
 
-export const Function = styled.span`
-  color: lightgray;
-  margin-bottom: 10px;
+export const Function = styled.h2`
+  color: #0070f3;
+  margin: 8px 0;
+  font-size: 22px;
+
+  @media (max-width: 760px) {
+    font-size: 18px;
+  }
 `;
 
 export const Intro = styled.span`
-  color: lightgray;
+  color: #a1a1aa;
   text-align: justify;
+  line-height: 1.6;
 
   @media (max-width: 760px) {
     font-size: 15px;
   }
 `;
 
-export const LinkProjects = styled.button`
-  width: 10rem;
-  padding: 10px;
+export const LinkContainer = styled.div`
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  font-weight: bold;
+  align-items: center;
+  margin-top: 24px;
+  gap: 12px;
+  flex-wrap: wrap;
+`;
 
-  svg {
-    font-size: 20px;
+export const StyledButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+
+  &:hover {
+    background-color: #005bb5;
+    transform: translateY(-2px);
   }
 `;
 
@@ -87,10 +111,9 @@ export const Logo = styled.div`
   }
 
   @media (max-width: 600px) {
-
     img {
-      width: 18rem;
-      height: 18rem;
+      width: 16rem;
+      height: 16rem;
     }
   }
 `;

@@ -18,9 +18,11 @@ export default function Header() {
     <Container>
       <Content>
         <ContentTitle>
-          <Title>
-            John Kennedy Moreria Dos Santos 
-          </Title>
+          <Link href="/" passHref>
+            <Title>
+              John Kennedy Moreira Dos Santos
+            </Title>
+          </Link>
           <SubTitle>
             Portfolio Pessoal
           </SubTitle>
@@ -30,13 +32,13 @@ export default function Header() {
         </Menu>
         <NavLinks sidebar={sidebar}>
           <CloseSidebar onClick={showSiderbar}><FaTimes /></CloseSidebar>
-          <Link href="/">
+          <Link href="/" passHref>
             <Ancora className={activeLink('')} onClick={showSiderbar}>Home</Ancora>
           </Link>
-          <Link href="projects">
+          <Link href="/projects" passHref>
             <Ancora className={activeLink('projects')} onClick={showSiderbar}>Projetos</Ancora>
           </Link>
-          <Link href="contact">
+          <Link href="/contact" passHref>
             <Ancora className={activeLink('contact')} onClick={showSiderbar}>Contato</Ancora>
           </Link>
         </NavLinks>

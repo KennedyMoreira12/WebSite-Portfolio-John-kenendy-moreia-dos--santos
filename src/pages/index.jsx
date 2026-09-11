@@ -1,35 +1,12 @@
-import { FaArrowRight } from 'react-icons/fa';
-import { Container, Content, Infos, Name, Function, Intro, Logo, Img } from '../../styles/indexStyle';
+import { FaArrowRight, FaDownload } from 'react-icons/fa';
+import { Container, Content, Infos, Name, Function, Intro, LinkContainer, StyledButton, Logo, Img } from '../../styles/indexStyle';
 import Link from 'next/link';
 import styled from 'styled-components';
-
-const StyledButton = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #0070f3;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
-  text-decoration: none;
-  font-size: 16px;
-
-  &:hover {
-    background-color: #005bb5;
-  }
-`;
-
-const LinkContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-`;
+import { assetPath } from '../../utils/basePath';
 
 const RoundedImg = styled(Img)`
   border-radius: 50%;
+  box-shadow: 0 0 40px rgba(0, 112, 243, 0.25);
 `;
 
 export default function Home() {
@@ -45,16 +22,16 @@ export default function Home() {
           <LinkContainer>
             <Link href="/projects" passHref>
               <StyledButton>
-                PROJETOS <FaArrowRight style={{ marginLeft: '5px' }} />
+                PROJETOS <FaArrowRight style={{ marginLeft: '8px' }} />
               </StyledButton>
             </Link>
-            <StyledButton href="/Curriculo/Currículo.pdf" download>
-              Download CV
+            <StyledButton href={assetPath('/Curriculo/Curriculo.pdf')} download>
+              <FaDownload style={{ marginRight: '8px' }} /> Download CV
             </StyledButton>
           </LinkContainer>
         </Infos>
         <Logo>
-          <RoundedImg src="/images/logo.png" alt="logo" />
+          <RoundedImg src={assetPath('/images/logo.png')} alt="Foto de John Kennedy" />
         </Logo>
       </Content>
     </Container>

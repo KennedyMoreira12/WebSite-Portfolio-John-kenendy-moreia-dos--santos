@@ -3,31 +3,54 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ContactContainer = styled.div`
+const ContactCard = styled.a`
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 16px;
+  padding: 20px 24px;
+  background-color: #1c1c1f;
+  border: 1px solid #26262b;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #e4e4e7;
+  font-size: 16px;
+  transition: transform 0.3s, border-color 0.3s, color 0.3s;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: #0070f3;
+    color: #ffffff;
+  }
 `;
 
 const IconWrapper = styled.div`
-  margin-right: 10px;
+  display: flex;
+  color: #0070f3;
+  font-size: 26px;
 `;
 
-const LinkText = styled.a`
-  color: #0070f3; /* Cor do link ajustável */
-  text-decoration: none;
+const Label = styled.strong`
+  font-size: 16px;
+  color: #ffffff;
 `;
 
-const ItemContact = ({ IconFa, link }) => {
+const LinkText = styled.span`
+  color: #a1a1aa;
+  font-size: 14px;
+  word-break: break-all;
+  margin-left: auto;
+  text-align: end;
+`;
+
+const ItemContact = ({ IconFa, label, link }) => {
   return (
-    <ContactContainer>
+    <ContactCard href={link} target="_blank" rel="noopener noreferrer">
       <IconWrapper>
         <IconFa />
       </IconWrapper>
-      <LinkText href={link} target="_blank" rel="noopener noreferrer">
-        {link}
-      </LinkText>
-    </ContactContainer>
+      <Label>{label}</Label>
+      <LinkText>{link.replace('mailto:', '')}</LinkText>
+    </ContactCard>
   );
 };
 

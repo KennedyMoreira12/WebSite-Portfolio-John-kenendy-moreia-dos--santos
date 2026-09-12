@@ -38,8 +38,12 @@ export const Infos = styled.div`
 
 export const Name = styled.span`
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
+  background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 
   @media (max-width: 760px) {
     font-size: 25px;

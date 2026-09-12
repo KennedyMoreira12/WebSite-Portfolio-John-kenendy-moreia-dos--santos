@@ -22,14 +22,18 @@ export const Content = styled.div`
 
 export const Title = styled.a`
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 800;
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: opacity 0.3s;
+  background: linear-gradient(135deg, #0070f3 0%, #00d4ff 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 
   &:hover {
-    color: #0070f3;
+    opacity: 0.85;
   }
 
   @media (max-width: 460px) {
@@ -114,5 +118,7 @@ export const ContentTitle = styled.div`
 
 export const SubTitle = styled.span`
   font-size: 13px;
-  color: #71717a;
+  font-weight: 600;
+  color: #00d4ff;
+  letter-spacing: 1px;
 `;

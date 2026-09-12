@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Content, Title, ItemCards } from '../../../styles/contactStyle';
-import { FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaEnvelope, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import ItemContact from '../../../components/ItemContact';
 
 export default function Contact() {
@@ -12,12 +12,22 @@ export default function Contact() {
           <ItemContact
             IconFa={FaLinkedin}
             label="LinkedIn"
-            link="https://www.linkedin.com/in/john-kennedy-moreira-405aa7128"
+            link="https://www.linkedin.com/in/john-kennedy-moreira-dos-santos-405aa7128"
+          />
+          <ItemContact
+            IconFa={FaGithub}
+            label="GitHub"
+            link="https://github.com/KennedyMoreira12"
           />
           <ItemContact
             IconFa={FaInstagram}
             label="Instagram"
             link="https://www.instagram.com/johnkennedy7314/"
+          />
+          <ItemContact
+            IconFa={FaWhatsapp}
+            label="WhatsApp"
+            link="https://wa.me/5538992015253"
           />
           <ItemContact
             IconFa={FaEnvelope}

@@ -97,7 +97,7 @@ export default function Home() {
             </LinkContainer>
           </Infos>
           <Logo>
-            <RoundedImg src={assetPath('/images/avatar-github.png')} alt="Foto de John Kennedy" />
+            <RoundedImg src={assetPath('/images/john.jpg')} alt="Foto de John Kennedy" />
           </Logo>
         </Content>
       </Container>
